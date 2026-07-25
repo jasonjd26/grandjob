@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Golden Bell Bridgeland ‚Äî Vietnamese, Calgary (unofficial design concept)</title>
+<meta name="description" content="Unofficial design concept by Grand Job for Golden Bell Bridgeland, 920 1 Ave NE, Calgary. Not affiliated with or endorsed by Golden Bell.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600;900&family=Dancing+Script:wght@600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --oxblood:#590B00; --ember:#631C06; --gold:#FFE375; --gold-deep:#E4C255;
+  --cream:#FBF6EC; --paper:#FFFDF8; --ink:#2A1410; --ink-soft:#7A625B;
+  --rule:#E7DCC8; --leaf:#3F6B4A;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.55 'Karla',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+
+/* concept strip */
+.concept{background:var(--ink);color:#F5E9DC;font-size:.8125rem;line-height:1.5;
+  padding:11px 20px;text-align:center}
+.concept b{color:var(--gold);font-weight:700}
+
+/* masthead */
+.mast{background:var(--oxblood);color:var(--gold);text-align:center;
+  padding:52px 22px 40px;position:relative;overflow:hidden}
+.mast::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% -10%,rgba(255,227,117,.16),transparent 62%)}
+.mast>*{position:relative}
+.mast .word{font-family:'Vollkorn',Georgia,serif;font-weight:900;letter-spacing:-.02em;
+  font-size:clamp(3rem,11vw,5.5rem);line-height:.92}
+.mast .script{font-family:'Dancing Script',cursive;font-weight:600;
+  font-size:clamp(1.25rem,4vw,1.75rem);color:var(--gold-deep);margin-top:6px}
+.mast .place{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(255,227,117,.72);margin-top:20px}
+.mast .lede{max-width:33ch;margin:16px auto 0;color:#F7E7C9;font-size:1.05rem}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.btn{font-weight:700;font-size:1rem;padding:14px 24px;border-radius:3px;text-decoration:none;
+  display:inline-block}
+.btn-g{background:var(--gold);color:var(--oxblood)}
+.btn-o{border:1.5px solid rgba(255,227,117,.5);color:var(--gold)}
+.rice{height:9px;background:repeating-linear-gradient(90deg,var(--gold) 0 14px,var(--ember) 14px 28px)}
+
+/* facts */
+.facts{background:var(--paper);border-bottom:1px solid var(--rule)}
+.facts-in{max-width:1080px;margin:0 auto;padding:26px 22px;display:grid;gap:22px;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.fact .k{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);
+  margin-bottom:5px}
+.fact .v{font-family:'Vollkorn',Georgia,serif;font-weight:600;font-size:1.2rem;line-height:1.3}
+.fact .v a{text-decoration:none;border-bottom:2px solid var(--gold-deep)}
+.fact .tbc{font-family:'Karla',sans-serif;font-weight:500;font-size:.95rem;color:var(--ink-soft);
+  font-style:italic}
+
+/* menu controls */
+.tools{position:sticky;top:0;z-index:40;background:var(--oxblood);
+  box-shadow:0 2px 14px rgba(42,20,16,.22)}
+.tools-in{max-width:1080px;margin:0 auto;padding:12px 22px 0}
+.srch{position:relative}
+.srch input{width:100%;font:400 1rem/1 'Karla',sans-serif;color:var(--ink);
+  background:var(--paper);border:0;border-radius:3px;padding:13px 14px 13px 42px}
+.srch input::placeholder{color:#A6968E}
+.srch svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;
+  stroke:#A6968E;fill:none;stroke-width:2}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:11px 0;scrollbar-width:none;-ms-overflow-style:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:700 .8125rem/1 'Karla',sans-serif;letter-spacing:.04em;
+  text-transform:uppercase;color:rgba(255,227,117,.8);background:transparent;
+  border:1.5px solid rgba(255,227,117,.34);border-radius:99px;padding:9px 15px;cursor:pointer;
+  white-space:nowrap;font-family:'Karla',sans-serif}
+.chip[aria-pressed="true"]{background:var(--gold);color:var(--oxblood);border-color:var(--gold)}
+.chip:focus-visible{outline:2px solid var(--paper);outline-offset:2px}
+
+/* menu */
+main{max-width:1080px;margin:0 auto;padding:34px 22px 10px}
+.note{background:var(--paper);border-left:4px solid var(--gold-deep);padding:14px 18px;
+  font-size:.9375rem;color:var(--ink-soft);margin-bottom:34px}
+.note b{color:var(--ink)}
+.grp{margin-bottom:44px}
+.grp[hidden]{display:none}
+.grp h2{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:1.9rem;
+  color:var(--oxblood);letter-spacing:-.01em}
+.grp .gsub{font-size:.9375rem;color:var(--ink-soft);margin-top:5px;max-width:62ch}
+.grp .grule{height:2px;background:var(--rule);margin:14px 0 6px}
+.item{display:grid;grid-template-columns:2.4rem 1fr auto;gap:0 14px;
+  padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.item[hidden]{display:none}
+.item .n{font-family:'Vollkorn',Georgia,serif;font-weight:600;color:#A8801F;
+  font-size:1rem}
+.item .nm{font-family:'Vollkorn',Georgia,serif;font-weight:600;font-size:1.15rem;line-height:1.3}
+.item .d{grid-column:2;font-size:.9375rem;color:var(--ink-soft);margin-top:3px}
+.item .p{font-family:'Karla',sans-serif;font-weight:700;font-size:1.05rem;
+  font-variant-numeric:tabular-nums;white-space:nowrap}
+.item .p::before{content:"$"}
+.badges{grid-column:2;display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.bg{font:700 .625rem/1 'Karla',sans-serif;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 8px;border-radius:2px}
+.bg.gf{background:#E7F0E8;color:var(--leaf)}
+.bg.vg{background:#E7F0E8;color:var(--leaf)}
+.bg.sp{background:#FBE6DF;color:var(--ember)}
+.bg.hs{background:var(--gold);color:var(--oxblood)}
+.adds{margin-top:16px;padding:16px 18px;background:var(--paper);border:1px solid var(--rule)}
+.adds h3{font:700 .7rem/1 'Karla',sans-serif;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:11px}
+.adds ul{list-style:none;display:grid;gap:7px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.adds li{display:flex;justify-content:space-between;gap:14px;font-size:.9375rem;
+  border-bottom:1px dotted var(--rule);padding-bottom:6px}
+.adds li span{font-weight:700;font-variant-numeric:tabular-nums}
+.adds li span::before{content:"+$"}
+.empty{padding:40px 0;text-align:center;color:var(--ink-soft)}
+.empty[hidden]{display:none}
+
+/* signature band */
+.sig{background:var(--ember);color:var(--gold);margin:8px 0 0}
+.sig-in{max-width:1080px;margin:0 auto;padding:44px 22px 48px}
+.sig h2{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:2rem}
+.sig .s{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--gold-deep);margin-bottom:22px}
+.sig-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.sig-card{background:rgba(0,0,0,.18);border:1px solid rgba(255,227,117,.22);padding:20px}
+.sig-card .no{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:2.2rem;
+  color:rgba(255,227,117,.4);line-height:1}
+.sig-card h3{font-family:'Vollkorn',Georgia,serif;font-weight:600;font-size:1.2rem;margin:6px 0 7px;color:#FFF3D2}
+.sig-card p{font-size:.9375rem;color:rgba(247,231,201,.82)}
+
+/* visit */
+.visit{background:var(--paper);border-top:1px solid var(--rule)}
+.visit-in{max-width:1080px;margin:0 auto;padding:46px 22px 52px;display:grid;gap:34px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.visit h2{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:1.7rem;
+  color:var(--oxblood);margin-bottom:14px}
+.visit p{margin-bottom:11px}
+.visit .big{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:1.6rem;
+  color:var(--oxblood);text-decoration:none;display:inline-block}
+.ways{list-style:none;display:grid;gap:9px;margin-top:6px}
+.ways li{border-bottom:1px solid var(--rule);padding-bottom:9px;font-weight:500}
+.tbc{font-style:italic;color:var(--ink-soft)}
+
+/* owner notes */
+.owner{background:#F1EBDE;border-top:3px solid var(--oxblood)}
+.owner-in{max-width:1080px;margin:0 auto;padding:40px 22px 46px}
+.owner h2{font-family:'Vollkorn',Georgia,serif;font-weight:900;font-size:1.45rem;color:var(--oxblood)}
+.owner .sub{font-size:.9375rem;color:var(--ink-soft);margin:7px 0 20px;max-width:70ch}
+.owner ol{padding-left:1.15rem;display:grid;gap:11px;font-size:.9375rem;max-width:78ch}
+.owner li::marker{font-weight:700;color:var(--oxblood)}
+.owner code{font:400 .875rem/1.4 ui-monospace,Menlo,monospace;background:#E4DCCA;padding:1px 5px}
+
+footer{background:var(--oxblood);color:rgba(247,231,201,.72);font-size:.875rem;
+  padding:30px 22px;text-align:center;line-height:1.7}
+footer b{color:var(--gold)}
+
+@media(max-width:640px){
+  .item{grid-template-columns:2.1rem 1fr auto;gap:0 10px;padding:13px 0}
+  .item .nm{font-size:1.05rem}
+  main{padding:26px 18px 6px}
+  .tools-in{padding:10px 18px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="concept">
+  This is an <b>unofficial design concept</b> created by Grand Job to show what a new website could look like.
+  It is <b>not affiliated with, endorsed by, or operated by Golden Bell.</b>
+  Dish names and prices are copied from goldenbell.ca and need the owner's confirmation before anything goes live.
+</div>
+
+<header class="mast">
+  <div class="word">Golden Bell</div>
+  <div class="script">Vietnamese Cuisine&nbsp; ¬∑&nbsp; nh√† h√†ng</div>
+  <div class="place">Bridgeland ¬∑ 920 1 Ave NE ¬∑ Calgary</div>
+  <p class="lede">Ph·ªü, sate, vermicelli and banh mi. Licensed and trading in Bridgeland since 2018.</p>
+  <div class="cta">
+    <a class="btn btn-g" href="#menu">See the menu</a>
+    <a class="btn btn-o" href="tel:+14032645575">Call 403 264 5575</a>
+  </div>
+</header>
+<div class="rice"></div>
+
+<section class="facts">
+  <div class="facts-in">
+    <div class="fact"><div class="k">Find us</div><div class="v">920 1 Ave NE<br>Calgary T2E 0C5</div></div>
+    <div class="fact"><div class="k">Phone</div><div class="v"><a href="tel:+14032645575">403 264 5575</a></div></div>
+    <div class="fact"><div class="k">Order online</div><div class="v"><a href="https://ritual.co/order/golden-bell-bridgeland-1-ave-ne-8-st-ne-calgary/c745" rel="noopener">Pickup &amp; delivery on Ritual</a></div></div>
+    <div class="fact"><div class="k">Opening hours</div><div class="v tbc">To be confirmed ‚Äî see note 1 below</div></div>
+  </div>
+</section>
+
+<div class="tools">
+  <div class="tools-in">
+    <div class="srch">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search the menu ‚Äî pho, banh mi, tofu, prawns‚Ä¶" aria-label="Search the menu">
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter menu sections"></div>
+  </div>
+</div>
+
+<main id="menu">
+  <div class="note">
+    <b>Every dish and price here is copied word for word from goldenbell.ca.</b>
+    The same dishes are priced roughly $1‚Äì$1.50 higher on Ritual, so this list is probably out of date.
+    Nothing has been invented, corrected or added ‚Äî the owner confirms the real prices before this goes live.
+  </div>
+  <div id="list"></div>
+  <div class="empty" id="empty" hidden>Nothing on the menu matches that. Try ‚Äúpho‚Äù, ‚Äúrolls‚Äù or ‚Äútofu‚Äù.</div>
+</main>
+
+<section class="sig">
+  <div class="sig-in">
+    <h2>The house dishes</h2>
+    <div class="s">the four Golden Bell puts its own name on</div>
+    <div class="sig-grid">
+      <div class="sig-card"><div class="no">56</div><h3>Golden Bell Noodle Soup</h3><p>Prawns, crab sticks, squids, bbq pork and wonton.</p></div>
+      <div class="sig-card"><div class="no">80</div><h3>Golden Bell Ultimate Rice Dish</h3><p>Grill pork chop, grill chicken, beef and shrimps.</p></div>
+      <div class="sig-card"><div class="no">74B</div><h3>Super Bowl</h3><p>Chicken, beef, pork, prawn, and spring rolls on vermicelli.</p></div>
+      <div class="sig-card"><div class="no">41</div><h3>ƒê·∫∑c Bi·ªát ‚Äî Beef Special</h3><p>Thinly sliced beef, brisket, tendon, tripe and meat ball.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="visit-in">
+    <div>
+      <h2>Come in</h2>
+      <p><strong>920 1 Ave NE, Calgary, AB T2E 0C5</strong><br>Bridgeland / Riverside, at 8 St NE.</p>
+      <p>Seated dining room, licensed by the City of Calgary since May 2018.</p>
+      <p class="tbc">Opening hours to be confirmed with the owner before publishing.</p>
+    </div>
+    <div>
+      <h2>Call</h2>
+      <a class="big" href="tel:+14032645575">403 264 5575</a>
+      <p style="margin-top:10px">Takeout orders and questions about the menu.</p>
+    </div>
+    <div>
+      <h2>Order in</h2>
+      <ul class="ways">
+        <li><a href="https://ritual.co/order/golden-bell-bridgeland-1-ave-ne-8-st-ne-calgary/c745" rel="noopener">Ritual ‚Äî pickup &amp; delivery</a></li>
+        <li>DoorDash</li>
+        <li>Uber Eats</li>
+        <li>SkipTheDishes</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="owner">
+  <div class="owner-in">
+    <h2>Notes for the owner ‚Äî not part of the website</h2>
+    <p class="sub">Things found on goldenbell.ca on 25 July 2026 that need a decision before a real site could go live.
+      Every one of these was checked directly, not guessed.</p>
+    <ol>
+      <li><b>Opening hours are published five different ways.</b> The top of your Bridgeland page and the footer of that same page give different hours; the homepage gives a third set (they match the Richmond page); Google says you are closed Mondays while your own site says you are open; Ritual gives a fourth closing time. That is why this concept leaves hours blank.</li>
+      <li><b>Menu prices look one revision out of date.</b> Nearly every dish is $1.00‚Äì$1.50 higher on Ritual than on your own site ‚Äî a flat increase that was applied there and never here.</li>
+      <li><b>Your menu page blocks pinch-zoom on phones.</b> The page sets <code>user-scalable=no</code>, so a customer physically cannot zoom in to read a dish. On an 86-line menu that is the single worst problem.</li>
+      <li><b>The site returns "403 Forbidden" to desktop browsers.</b> Content is only served to phones, which hurts search and locks some customers out entirely.</li>
+      <li><b>McLeod is still in the footer of every page</b> with a "View Mcleod Map &amp; Info" link ‚Äî <code>/mcleod/</code> returns 404 and no McLeod licence exists.</li>
+      <li><b>The new 17 Ave location has no working page.</b> <code>/17-ave-sw/</code> returns 403, and the address on the site (1112 17 Ave SW) does not match the City licence (#105, 1013 17 Ave SW).</li>
+      <li><b>Two URLs serve the same Bridgeland menu</b> ‚Äî <code>/bridgeland/</code> and <code>/bridgeland-calgary/</code> ‚Äî which splits your search ranking between them.</li>
+      <li><b>The site still carries its 2018 setup furniture:</b> the only blog post is the hosting company's demo article, and the footer shows "Archives: July 2018", "Uncategorized" and a "Log in" link.</li>
+      <li><b>The only photograph on the site is a stock photo of Hoi An, Vietnam</b> ‚Äî not one picture of your food, your room or your front door.</li>
+      <li><b>The logo reads "Vietnamese Cusine".</b> Corrected to "Cuisine" in this concept ‚Äî flagging it rather than changing it quietly.</li>
+      <li><b>Your address is published two ways:</b> 920 1 Ave NE on every listing, 916 1 Av NE on the City licence. Probably two civic numbers on one building, but worth settling.</li>
+      <li><b>No contact page, no email, no reservation path and no social links</b> exist anywhere on the site.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <b>Unofficial design concept by Grand Job.</b><br>
+  Not affiliated with, endorsed by, or operated by Golden Bell. No payment is taken and no order is placed on this page.<br>
+  Dish names, descriptions and prices reproduced from goldenbell.ca on 25 July 2026 and pending the owner's confirmation.<br>
+  grandjob.shop ¬∑ hello@grandjob.shop
+</footer>
+
+<script>
+const M=[
+ {g:"Drinks",sub:"",items:[
+  {n:"1",nm:"Vietnamese style coffee",d:"Slow drip filter with condensed milk, hot or cold",p:"5.50"},
+  {n:"2",nm:"Tea",d:"Jasmine or green",p:"1.00"},
+  {n:"3",nm:"Soft drink",d:"In cans",p:"2.00"},
+  {n:"4",nm:"Bottle juice / water",d:"",p:"3.00"},
+  {n:"5",nm:"Sparkling limenade",d:"",p:"4.50"},
+  {n:"6",nm:"Coconut juice",d:"",p:"4.50"},
+  {n:"7",nm:"Bubble tea",d:"Pearl or jelly ‚Äî honey dew, coconut, watermelon, taro root, mango, litchi, cantaloup",p:"6.00"},
+  {n:"8",nm:"Real tropical fruit shake",d:"Avocado, strawberry, jack fruit, pineapple",p:"6.00"},
+  {n:"",nm:"Coconut water",d:"500ml can, no pulp, no sugar added",p:"3.50"}],
+  adds:[["Extra pearl or jelly","0.75"]]},
+
+ {g:"Appetizers",sub:"",items:[
+  {n:"16a",nm:"Chicken dumpling",d:"8 pieces",p:"8.25"},
+  {n:"16b",nm:"Chicken dumpling",d:"4 pieces",p:"4.25"},
+  {n:"18",nm:"Small wonton soup",d:"",p:"5.50"},
+  {n:"19",nm:"Deep fried spring rolls",d:"4 rolls",p:"8.25"},
+  {n:"19B",nm:"Deep fried spring rolls",d:"2 rolls",p:"4.25"},
+  {n:"20",nm:"Shrimp salad rolls",d:"3 rolls",p:"8.25"},
+  {n:"21",nm:"Grilled pork salad rolls",d:"3 rolls",p:"8.50"},
+  {n:"22",nm:"Grilled chicken salad rolls",d:"3 rolls",p:"8.50"},
+  {n:"23",nm:"Deep fried wontons",d:"8 pieces",p:"8.25"},
+  {n:"23b",nm:"Deep fried wontons",d:"4 pieces",p:"4.25"},
+  {n:"24",nm:"Salt and pepper squid",d:"",p:"14.00"}]},
+
+ {g:"Vegetables",sub:"",items:[
+  {n:"25",nm:"Vegetables spring rolls",d:"4 rolls",p:"8.25"},
+  {n:"25B",nm:"Vegetables spring rolls",d:"2 rolls",p:"4.25"},
+  {n:"26",nm:"Vegetables salad rolls",d:"3 rolls",p:"8.25"},
+  {n:"27",nm:"Steamed mixed vegetables",d:"",p:"8.50"},
+  {n:"28",nm:"Vegetables spring rolls on vermicelli",d:"",p:"12.95"},
+  {n:"30",nm:"Stir fry vegetables with tofu on rice",d:"",p:"13.95"},
+  {n:"31",nm:"Stir fry vegetables with tofu in yellow curry sauce",d:"Served with rice",p:"14.50",t:["sp"]},
+  {n:"33",nm:"Vegetables tofu satay peanut noodle soup",d:"",p:"13.25",t:["sp","gf","vg"]}]},
+
+ {g:"Banh Mi",sub:"Mayo, cheese, pickle carrot, onion, cucumber and cilantro with your choice of meat.",items:[
+  {n:"34",nm:"Beef",d:"",p:"9.75"},
+  {n:"35",nm:"Chicken",d:"",p:"9.75"},
+  {n:"36",nm:"Pork",d:"",p:"9.75"},
+  {n:"37",nm:"Vegetarian tofu",d:"",p:"9.75"}]},
+
+ {g:"Ph·ªü",sub:"Rice noodle in beef broth. All soups served with bean sprouts, basil and lime on the side.",items:[
+  {n:"41",nm:"ƒê·∫∑c bi·ªát ‚Äî beef special",d:"Thinly sliced beef, brisket, tendon, tripe and meat ball",p:"14.50",t:["hs"]},
+  {n:"42",nm:"B√≤ vi√™n",d:"Beef meat balls",p:"13.99"},
+  {n:"43",nm:"N·∫°m",d:"Brisket",p:"13.99"},
+  {n:"44",nm:"T√°i",d:"Rare beef thinly sliced",p:"13.99"},
+  {n:"45",nm:"T√°i s√°ch",d:"Rare beef and tripe",p:"13.99"},
+  {n:"46",nm:"T√°i n·∫°m",d:"Rare beef and brisket",p:"13.99"},
+  {n:"47",nm:"T√°i b√≤ vi√™n",d:"Rare beef and meat ball",p:"13.99"},
+  {n:"48",nm:"B√≤ kho",d:"Beef stew",p:"14.95",t:["sp"]}]},
+
+ {g:"Pho Sate",sub:"Spicy peanut noodle soup.",items:[
+  {n:"51",nm:"Sate beef",d:"",p:"14.45",t:["sp","gf"]},
+  {n:"52",nm:"Grill meat",d:"A. beef ¬∑ B. chicken ¬∑ C. pork",p:"14.75",t:["sp"]},
+  {n:"53",nm:"Sate seafood",d:"",p:"15.75",t:["sp"]},
+  {n:"54",nm:"Sate chicken",d:"",p:"14.45",t:["sp","gf"]}]},
+
+ {g:"Chicken broth",sub:"Rice noodle in chicken broth.",items:[
+  {n:"56",nm:"Golden Bell noodle soup",d:"Prawns, crab sticks, squids, bbq pork and wonton",p:"15.75",t:["hs"]},
+  {n:"57",nm:"Chicken noodle soup",d:"",p:"13.99",t:["gf"]},
+  {n:"58",nm:"Wonton noodle soup",d:"Wontons and bbq pork in egg noodle",p:"14.50"},
+  {n:"59",nm:"Seafood noodle soup",d:"Prawns, squids and crab sticks",p:"15.25"}],
+  adds:[["Size XL","2.00"],["Add noodle","2.95"],["Add veggies","2.95"],["Add tofu","2.95"],["Add tendon, tripe, meat balls, beef or brisket","4.00"],["Add shrimps","4.50"]]},
+
+ {g:"Vermicelli",sub:"Grilled meats on rice vermicelli with bean sprouts, lettuce, cucumber, carrots, topped with ground peanut and green onion.",items:[
+  {n:"60",nm:"Spring rolls on vermicelli",d:"",p:"13.50"},
+  {n:"61",nm:"Grilled pork",d:"",p:"13.95"},
+  {n:"62",nm:"Grilled pork and spring rolls",d:"",p:"14.50"},
+  {n:"63",nm:"Grilled pork, pork meat ball and spring rolls",d:"",p:"14.95"},
+  {n:"67",nm:"Tiger prawns",d:"",p:"13.95"},
+  {n:"68",nm:"Tiger prawns and spring rolls",d:"",p:"14.95"},
+  {n:"71",nm:"Lemongrass beef",d:"",p:"13.95"},
+  {n:"71B",nm:"Lemongrass beef and spring rolls",d:"",p:"14.95"},
+  {n:"72",nm:"Charbroiled lemon grass chicken",d:"White meat",p:"13.95"},
+  {n:"72B",nm:"Charbroiled lemon grass chicken and spring rolls",d:"White meat",p:"14.95"},
+  {n:"74",nm:"Lemongrass beef, chicken and prawns",d:"",p:"15.75"},
+  {n:"74B",nm:"Super bowl",d:"Chicken, beef, pork, prawn and spring rolls",p:"18.75",t:["hs"]}]},
+
+ {g:"Stir fry",sub:"",items:[
+  {n:"75",nm:"Season mix vegetables stir fry on steamed or crispy egg noodle",d:"A. beef 15.75 ¬∑ B. chicken 15.75 ¬∑ C. prawn 16.25 ¬∑ D. seafood 16.75",p:"15.75"},
+  {n:"76",nm:"Season mix vegetables stir fry with rice",d:"A. beef 15.75 ¬∑ B. chicken 15.75 ¬∑ C. prawn 16.25 ¬∑ D. seafood 16.75",p:"15.75"}]},
+
+ {g:"Rice",sub:"",items:[
+  {n:"80",nm:"Golden Bell ultimate rice dish",d:"Grill pork chop, grill chicken, beef and shrimps",p:"15.95",t:["hs"]},
+  {n:"82",nm:"Pork chop and 2 eggs",d:"",p:"14.50"},
+  {n:"83",nm:"Pork chops",d:"",p:"14.50"},
+  {n:"84",nm:"Grill lemon grass chicken on steam rice",d:"",p:"13.95"},
+  {n:"84B",nm:"Lemon grass beef on steam rice",d:"",p:"13.95"},
+  {n:"85",nm:"Chicken fried rice",d:"",p:"14.95"},
+  {n:"86",nm:"Seafood fried rice",d:"",p:"15.95"}]},
+
+ {g:"Special dishes",sub:"",items:[
+  {n:"90",nm:"Pad Thai",d:"Egg, chicken, prawn and tofu stir-fried in rice noodle and bean sprouts with tamarind sauce",p:"15.95"},
+  {n:"91A",nm:"Beef stir fry with curry sauce",d:"Served with rice",p:"15.95"},
+  {n:"91B",nm:"Chicken stir fry with curry sauce",d:"Served with rice",p:"15.95"}]},
+
+ {g:"Sides",sub:"",items:[
+  {n:"",nm:"Bowl of broth",d:"",p:"3.00"},
+  {n:"",nm:"Rice bowl",d:"",p:"2.95"},
+  {n:"",nm:"Rice plate",d:"",p:"5.00"},
+  {n:"",nm:"Coconut rice bowl",d:"",p:"3.75"},
+  {n:"",nm:"Coconut rice plate",d:"",p:"6.50"},
+  {n:"",nm:"Peanut sauce",d:"",p:"0.75"},
+  {n:"",nm:"Sate chilli oil",d:"",p:"0.75"}]}
+];
+const LBL={gf:"Gluten free",vg:"Vegan",sp:"Spicy",hs:"House dish"};
+const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+// strip Vietnamese diacritics so "pho" finds "Ph·ªü" and "dac biet" finds "ƒê·∫∑c bi·ªát"
+const fold=s=>s.toLowerCase().replace(/ƒë/g,"d").normalize("NFD").replace(/[ÃÄ-ÕØ]/g,"");
+const list=document.getElementById("list"), chips=document.getElementById("chips"),
+      q=document.getElementById("q"), empty=document.getElementById("empty");
+
+list.innerHTML=M.map((g,gi)=>`<section class="grp" data-g="${gi}">
+  <h2>${esc(g.g)}</h2>${g.sub?`<p class="gsub">${esc(g.sub)}</p>`:""}
+  <div class="grule"></div>
+  ${g.items.map(i=>`<div class="item" data-s="${esc(fold(g.g+" "+g.sub+" "+i.n+" "+i.nm+" "+i.d+" "+(i.t||[]).map(t=>LBL[t]).join(" ")))}">
+    <div class="n">${esc(i.n)}</div><div class="nm">${esc(i.nm)}</div><div class="p">${i.p}</div>
+    ${i.d?`<div class="d">${esc(i.d)}</div>`:""}
+    ${(i.t||[]).length?`<div class="badges">${i.t.map(t=>`<span class="bg ${t}">${LBL[t]}</span>`).join("")}</div>`:""}
+  </div>`).join("")}
+  ${g.adds?`<div class="adds"><h3>Add on</h3><ul>${g.adds.map(a=>`<li>${esc(a[0])}<span>${a[1]}</span></li>`).join("")}</ul></div>`:""}
+</section>`).join("");
+
+chips.innerHTML=[`<button class="chip" type="button" aria-pressed="true" data-f="all">All</button>`]
+  .concat(M.map((g,i)=>`<button class="chip" type="button" aria-pressed="false" data-f="${i}">${esc(g.g)}</button>`)).join("");
+
+let filter="all";
+function apply(){
+  const term=fold(q.value.trim()); let shown=0;
+  document.querySelectorAll(".grp").forEach(sec=>{
+    const inFilter = filter==="all" || sec.dataset.g===filter;
+    let vis=0;
+    sec.querySelectorAll(".item").forEach(it=>{
+      const ok = inFilter && (!term || it.dataset.s.includes(term));
+      it.hidden=!ok; if(ok) vis++;
+    });
+    const adds=sec.querySelector(".adds"); if(adds) adds.hidden = !inFilter || !!term;
+    sec.hidden = vis===0; shown+=vis;
+  });
+  empty.hidden = shown>0;
+}
+chips.addEventListener("click",e=>{
+  const b=e.target.closest(".chip"); if(!b) return;
+  filter=b.dataset.f;
+  chips.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",String(c===b)));
+  apply();
+});
+q.addEventListener("input",apply);
+apply();
+</script>
+</body>
+</html>
