@@ -7,12 +7,18 @@
   <meta name="description" content="Private browser trackers for enquiries, orders and follow-ups from CAD350, plus polished business proposals from CAD495. Practical work by Jason Daly in Calgary. Try the tracker and see the proposal sample.">
   <link rel="canonical" href="https://grandjob.shop/">
   <meta name="theme-color" content="#ffffff">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect x='1' y='1' width='42' height='42' rx='9' fill='%231d1d1f'/%3E%3Cpath d='M30 14c-5-5-13-3-16 3-3 7 1 14 8 14 5 0 9-4 9-8h-9' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='33' cy='11' r='2.5' fill='%238ac1ff'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="assets/grandjob-logo.svg">
   <meta property="og:title" content="Grand Job — Simple business trackers. Polished proposals.">
   <meta property="og:description" content="Private trackers for enquiries, orders and follow-ups. Clear client proposals from your notes and prices. Try the working demo and explore both services.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://grandjob.shop/">
-  <meta property="og:image" content="https://grandjob.shop/assets/proposal-page-1.webp">
+  <meta property="og:image" content="https://grandjob.shop/assets/grandjob-social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Grand Job — Business trackers. Polished proposals.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://grandjob.shop/assets/grandjob-social-card.png">
+  <meta name="twitter:image:alt" content="Grand Job — Business trackers. Polished proposals.">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -21,7 +27,7 @@
   <header class="site-header">
     <nav class="nav shell" aria-label="Main navigation">
       <a class="wordmark" href="#top" aria-label="Grand Job home">
-        <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><rect x="1" y="1" width="42" height="42" rx="9" fill="currentColor"/><path d="M30 14c-5-5-13-3-16 3-3 7 1 14 8 14 5 0 9-4 9-8h-9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33" cy="11" r="2.5" fill="#8ac1ff"/></svg>
+        <img class="mark" src="assets/grandjob-logo.svg" alt="" width="30" height="30" aria-hidden="true">
         <span>grand job<span class="brand-dot">.</span></span>
       </a>
       <div class="nav-links"><a href="#demo">Try a tracker</a><a href="#sample">Proposal sample</a><a href="#services">Services</a><a href="#about">About</a></div>
@@ -155,7 +161,7 @@
 
     <section class="contact section-tint" id="contact" aria-labelledby="contact-title">
       <div class="shell section-space contact-grid">
-        <div class="contact-copy reveal"><p class="eyebrow">Tell us what needs doing</p><h2 class="display-title" id="contact-title">A tracker?<br>A proposal?</h2><p>Tell me about your business and the job you want sorted. We agree the scope and timing before you pay.</p><div class="contact-direct"><a href="mailto:dalyjason1@gmail.com">dalyjason1@gmail.com</a><a href="tel:+18257793268">825-779-3268</a></div><p class="contact-privacy">A brief is an enquiry, not an accepted order. No files or payment details are collected by this page.</p></div>
+        <div class="contact-copy reveal"><p class="eyebrow">Tell us what needs doing</p><h2 class="display-title" id="contact-title">A tracker?<br>A proposal?</h2><p>Tell me about your business and the job you want sorted. We agree the scope and timing before you pay.</p><div class="contact-direct"><a href="mailto:grandjobcanada@gmail.com">grandjobcanada@gmail.com</a><a href="tel:+18257793268">825-779-3268</a></div><p class="contact-privacy">A brief is an enquiry, not an accepted order. No files or payment details are collected by this page.</p></div>
         <form class="brief-form reveal" id="brief-form">
           <div class="form-row"><label for="service">What do you need?</label><select id="service" name="service"><option value="tracker">Private browser tracker — CAD350</option><option value="proposal">Business proposal — CAD495</option></select></div>
           <div class="form-row"><label for="company">Your business <span aria-hidden="true">*</span></label><input id="company" name="company" autocomplete="organization" maxlength="120" required placeholder="Business name"></div>

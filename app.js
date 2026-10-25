@@ -54,7 +54,7 @@
   const status = document.getElementById('form-status');
   const copyButton = document.getElementById('copy-enquiry');
   const fallback = document.getElementById('copy-fallback');
-  const destination = 'dalyjason1@gmail.com';
+  const destination = 'grandjobcanada@gmail.com';
   const subjects = { proposal: '[Grand Job] Proposal enquiry', tracker: '[Grand Job] Tracker enquiry' };
   const serviceSelect = form.elements.service;
   const prospectRow = document.getElementById('prospect-row');
