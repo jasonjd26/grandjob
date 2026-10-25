@@ -58,8 +58,8 @@
   const subject = '[Grand Job] Proposal enquiry';
 
   function buildEnquiry() {
-    return 'Hi Jason,\n\nI would like to enquire about the commercial cleaning proposal pack.\n\n' +
-      'Our cleaning business: ' + form.elements.company.value.trim() + '\n' +
+    return 'Hi Jason,\n\nI would like to enquire about business proposal writing.\n\n' +
+      'Our business: ' + form.elements.company.value.trim() + '\n' +
       'The proposal is for: ' + form.elements.prospect.value.trim() + '\n' +
       'Preferred deadline: ' + (form.elements.deadline.value || 'To be discussed') + '\n\n' +
       'What we need:\n' + form.elements.brief.value.trim() + '\n\n' +
