@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checking cleaning jobs against invoices | Grand Job</title>
+  <meta name="description" content="Compare three fictional cleaning visits with the invoice record. One matches, one is billed monthly, and one needs a closer look.">
+  <link rel="canonical" href="https://grandjob.shop/cleaning-invoice-check.html">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" type="image/svg+xml" href="assets/grandjob-logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .check-shell{width:min(840px,calc(100% - 48px));margin-inline:auto}
+    .check-nav{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:18px}
+    .check-nav>a:last-child,.check-footer{color:#515154;font-size:14px}
+    .check-head{padding:clamp(45px,8vw,84px) 0 34px}
+    .check-kicker{font-size:13px;font-weight:650;color:#0058af;letter-spacing:.045em}
+    .check-head h1{max-width:740px;margin:12px 0 17px;font-size:clamp(39px,6.5vw,70px);line-height:1.02;letter-spacing:-.055em}
+    .check-lead{max-width:610px;color:#48484d;font-size:clamp(18px,2.8vw,22px);line-height:1.43}
+    .check-board{border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .check-board-head{padding:23px 26px 19px;background:var(--tint)}
+    .check-board h2,.check-reply h2{font-size:clamp(24px,3.6vw,32px);line-height:1.18;letter-spacing:-.04em}
+    .check-board-head p,.check-row-id,.check-footer,.check-privacy{font-size:14px;color:#54545b}
+    .check-board-head p{margin-top:6px}
+    .check-board details{border-top:1px solid var(--line)}
+    .check-board summary{padding:16px 26px;display:grid;grid-template-columns:95px 1fr auto;align-items:center;gap:13px;list-style:none;cursor:pointer}
+    .check-board summary::-webkit-details-marker{display:none}
+    .check-board summary:hover{background:#f5f8fc}
+    .check-board summary:focus-visible{outline-offset:-4px;border-radius:4px}
+    .check-row-id{font-variant-numeric:tabular-nums}
+    .check-job{font-size:18px;letter-spacing:-.02em;line-height:1.3}
+    .check-toggle{display:grid;place-items:center;width:30px;height:30px;border:1px solid #c2c9d2;border-radius:50%;color:var(--blue);font-size:20px;line-height:1}
+    .check-toggle::before{content:'+'}.check-board details[open] .check-toggle::before{content:'−'}
+    .check-evidence{padding:0 26px 20px}.check-evidence dl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 12px}
+    .check-evidence dl>div{padding:14px 16px;background:var(--tint);border-radius:12px}
+    .check-evidence dt{color:#55555c;font-size:13px;font-weight:650}
+    .check-evidence dd{margin:4px 0 0;color:#303036;font-size:16px;line-height:1.45}
+    .check-result{font-size:15px;line-height:1.45;color:#3f4045}.check-result strong{color:#1d1d1f}
+    .check-reply{margin:36px 0 44px;padding-left:22px;border-left:3px solid var(--blue)}
+    .check-reply h2{margin:6px 0 12px;font-size:clamp(24px,3.3vw,31px);max-width:660px}
+    .check-reply .check-privacy{max-width:550px;margin-bottom:10px}
+    .check-email{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px;font-weight:600;overflow-wrap:anywhere}
+    .check-footer{border-top:1px solid var(--line);padding:20px 0 32px}
+    @media(max-width:550px){.check-shell{width:calc(100% - 32px)}.check-board-head,.check-board summary{padding:16px}.check-board summary{grid-template-columns:1fr auto;gap:3px 10px}.check-row-id{grid-column:1;grid-row:1}.check-job{grid-column:1;grid-row:2}.check-toggle{grid-column:2;grid-row:1/3}.check-evidence{padding:0 16px 16px}.check-evidence dl{grid-template-columns:1fr;gap:6px}.check-evidence dl>div{padding:10px 12px}.check-reply{padding-left:16px}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to example</a>
+  <header class="site-header"><nav class="check-shell check-nav" aria-label="Main navigation">
+    <a class="wordmark" href="/" aria-label="Grand Job home"><img class="mark" src="assets/grandjob-logo.svg" alt="" width="30" height="30"><span>grand job<span class="brand-dot">.</span></span></a>
+    <a href="/">Back to Grand Job</a>
+  </nav></header>
+  <main class="check-shell" id="main">
+    <header class="check-head">
+      <p class="check-kicker">Cleaning operations · Fictional example</p>
+      <h1>Did every clean make it onto an invoice?</h1>
+      <p class="check-lead">Three visits are marked complete. Only one needs a closer look. Open each visit to compare the crew’s log with the billing record.</p>
+    </header>
+    <section class="check-board" aria-labelledby="week-title">
+      <div class="check-board-head"><h2 id="week-title">Friday invoice check</h2><p>Sample records as of 4 p.m., October 30, 2026</p></div>
+      <details open>
+        <summary><span class="check-row-id">Oct 28 · J-21</span><strong class="check-job">Office clean</strong><span class="check-toggle" aria-hidden="true"></span></summary>
+        <div class="check-evidence"><dl><div><dt>Crew log</dt><dd>J-21 complete. Standard office clean, billed per visit.</dd></div><div><dt>Billing record</dt><dd>Invoice 104, sent October 29, lists “office clean · J-21.”</dd></div></dl>
+          <p class="check-result"><strong>Matched.</strong> The visit ID and service agree. This check shows it was invoiced; payment is a separate question.</p></div>
+      </details>
+      <details>
+        <summary><span class="check-row-id">Oct 29 · J-22</span><strong class="check-job">Lobby clean</strong><span class="check-toggle" aria-hidden="true"></span></summary>
+        <div class="check-evidence"><dl><div><dt>Crew log</dt><dd>J-22 complete. Weekly lobby clean on a monthly plan.</dd></div><div><dt>Billing record</dt><dd>The October batch is scheduled for November 2. J-22 is already on its draft.</dd></div></dl>
+          <p class="check-result"><strong>Scheduled for billing.</strong> There’s a reason it isn’t on a sent invoice yet. Check the batch after November 2.</p></div>
+      </details>
+      <details>
+        <summary><span class="check-row-id">Oct 30 · J-23</span><strong class="check-job">Move-out clean</strong><span class="check-toggle" aria-hidden="true"></span></summary>
+        <div class="check-evidence"><dl><div><dt>Crew log</dt><dd>J-23 complete at noon. One-off move-out clean, billed on completion.</dd></div><div><dt>Billing record</dt><dd>No J-23 entry appears in the sent invoices or the draft batch.</dd></div></dl>
+          <p class="check-result"><strong>Worth checking.</strong> Ask whether it was billed under another reference or put on hold before creating an invoice.</p></div>
+      </details>
+    </section>
+    <section class="check-reply" aria-labelledby="reply-title">
+      <p class="check-kicker">A question for people who run cleaning businesses</p>
+      <h2 id="reply-title">The last time you checked completed jobs against invoices, how did you do it?</h2>
+      <p class="check-privacy">A sentence about your process is plenty. Please leave out names, addresses, invoice numbers and attachments.</p>
+      <a class="check-email" href="mailto:grandjobcanada@gmail.com?subject=Cleaning%20invoice%20research">Email your answer<span class="sr-only"> to grandjobcanada@gmail.com</span> <span aria-hidden="true">&nbsp;↗</span></a>
+    </section>
+  </main>
+  <footer class="check-shell check-footer">Grand Job · Calgary, Alberta</footer>
+</body>
+</html>
