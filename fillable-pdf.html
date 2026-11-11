@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Grand Job adds text fields and checkboxes to your existing blank PDF. Request a quote by email.">
+  <title>Fillable PDF service | Grand Job</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f6f8f3;
+      --ink: #192d26;
+      --muted: #405950;
+      --line: #c7d5c9;
+      --green: #285640;
+      --wash: #e8efe7;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .frame {
+      width: min(100% - 3rem, 62rem);
+      margin-inline: auto;
+    }
+
+    .masthead {
+      padding-block: 1.45rem;
+      border-bottom: 1px solid var(--line);
+      font-weight: 750;
+      letter-spacing: 0.035em;
+    }
+
+    main { padding-block: clamp(2rem, 7vw, 5rem); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+      gap: clamp(1.75rem, 5vw, 4.5rem);
+      align-items: start;
+    }
+
+    h1, h2, p { margin: 0; }
+    h1, h2 { line-height: 1.12; }
+
+    h1 {
+      font-size: clamp(2.45rem, 6.2vw, 4.6rem);
+      font-weight: 780;
+      letter-spacing: -0.045em;
+      max-width: 10ch;
+    }
+
+    .intro {
+      margin-block: 1.2rem 1.45rem;
+      color: var(--muted);
+      font-size: clamp(1.04rem, 1.8vw, 1.21rem);
+      max-width: 38ch;
+    }
+
+    a {
+      color: var(--green);
+      text-underline-offset: 0.2em;
+    }
+
+    a:hover { color: var(--ink); }
+    a:focus-visible {
+      outline: 3px solid #22634d;
+      outline-offset: 4px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.68rem 1.1rem;
+      border: 1px solid var(--green);
+      border-radius: 0.55rem;
+      background: var(--green);
+      color: white;
+      font-weight: 680;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #1c4432;
+      color: white;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem 1.15rem;
+    }
+
+    .actions > a:last-child { font-weight: 650; }
+
+    .rate {
+      padding: clamp(1.2rem, 3vw, 1.75rem);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--wash);
+    }
+
+    .rate h2 {
+      font-size: 2.55rem;
+      letter-spacing: -0.045em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .rate p {
+      margin-top: 0.5rem;
+      color: var(--muted);
+    }
+
+    .rate ul {
+      margin: 0.9rem 0 0;
+      padding-inline-start: 1.15rem;
+    }
+
+    .rate li + li { margin-top: 0.4rem; }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(1.4rem, 5vw, 4rem);
+      margin-top: clamp(2rem, 7vw, 4rem);
+      padding-top: clamp(1.5rem, 4vw, 2.3rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .details h2 { font-size: 1.35rem; }
+    .details p { margin-top: 0.65rem; color: var(--muted); }
+    .details a { display: inline-block; margin-top: 0.7rem; font-weight: 680; }
+    .email { overflow-wrap: anywhere; }
+
+    @media (max-width: 47rem) {
+      .hero, .details { grid-template-columns: minmax(0, 1fr); }
+      h1 { max-width: 14ch; }
+      .intro { max-width: 45ch; }
+    }
+
+    @media (max-width: 24rem) {
+      .frame { width: calc(100% - 2rem); }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="frame">Grand Job</div>
+  </header>
+  <main class="frame">
+    <div class="hero">
+      <section aria-labelledby="offer-title">
+        <h1 id="offer-title">Make your PDF fillable</h1>
+        <p class="intro">Send your blank form. Get it back with text fields and checkboxes in the layout you already use.</p>
+        <div class="actions">
+          <a class="button" href="./fillable-form-sample.pdf">Try the sample PDF</a>
+          <a href="mailto:grandjobcanada@gmail.com?subject=Fillable%20PDF%20enquiry&amp;body=Hi%20Grand%20Job%2C%0D%0A%0D%0AI'd%20like%20a%20quote%20to%20make%20my%20blank%20PDF%20fillable.%0D%0A%0D%0ANumber%20of%20pages%3A%0D%0AText%20fields%20and%20checkboxes%20needed%3A%0D%0APDF%20viewer%20I%20use%3A%0D%0ADeadline%20(if%20any)%3A%0D%0A%0D%0AI'll%20attach%20a%20blank%20copy%20I%20own.">Request by email</a>
+        </div>
+      </section>
+      <section class="rate" aria-labelledby="price-title">
+        <h2 id="price-title">CAD $59</h2>
+        <p>Pilot price, confirmed by email.</p>
+        <ul>
+          <li>One blank PDF you own, up to two pages and 12 fields total</li>
+          <li>One correction</li>
+          <li>Delivery within one business day after we agree on the file and scope</li>
+        </ul>
+      </section>
+    </div>
+    <div class="details">
+      <section aria-labelledby="sample-title">
+        <h2 id="sample-title">Try a sample</h2>
+        <p>Type into the fictional service visit form, tick a box, then save and reopen your copy.</p>
+      </section>
+      <section aria-labelledby="email-title">
+        <h2 id="email-title">What to send</h2>
+        <p>Attach a blank copy with no completed answers. Tell us which fields you need, what PDF viewer you use, and your deadline.</p>
+        <a class="email" href="mailto:grandjobcanada@gmail.com?subject=Fillable%20PDF%20enquiry&amp;body=Hi%20Grand%20Job%2C%0D%0A%0D%0AI'd%20like%20a%20quote%20to%20make%20my%20blank%20PDF%20fillable.%0D%0A%0D%0ANumber%20of%20pages%3A%0D%0AText%20fields%20and%20checkboxes%20needed%3A%0D%0APDF%20viewer%20I%20use%3A%0D%0ADeadline%20(if%20any)%3A%0D%0A%0D%0AI'll%20attach%20a%20blank%20copy%20I%20own.">grandjobcanada@gmail.com</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
